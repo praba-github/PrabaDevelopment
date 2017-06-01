@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GWMMaster.master.cs"
+    Inherits="GWMPortal.GWMMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home | GWM Portal</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Bootstrap/Template/css/bootstrap.css" rel="stylesheet" />
+    <link href="Bootstrap/Template/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Bootstrap/Template/css/animate.min.css" rel="stylesheet" />
+    <link href="Bootstrap/Template/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="Bootstrap/Template/css/main.css" rel="stylesheet" />
+    <link href="Bootstrap/Template/css/responsive.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="Bootstrap/Template/js/jquery.min.js"></script>
+    <script type="text/javascript" src="Bootstrap/Template/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/moment.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap-datetimepicker.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <%--<div class="top-number"><p><i class="fa fa-phone-square"></i>Logged in User Name</p></div>--%>
+                        <div class="top-number"><p><i class="glyphicon glyphicon-user"></i>Welcome  <b><asp:Label ID="lblLoggedInUserName" runat="server" Text="Label"></asp:Label></b> !</p></div>
+                    </div>
+                     <div>
+                        <div style="float:right;"><p style="color:White;"><asp:Label ID="lblCurrentDate" runat="server" Text="Label"></asp:Label></p></div>
+                    </div>
+                    
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">Global Wealth Management Portal</div>                    
+                </div>				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                          
+                        <li><a href="GWMPortalHome.aspx"><span class="glyphicon glyphicon-home"></span> Home</a></li>    
+                        <li><a href="AboutUs.aspx"><span class="glyphicon glyphicon-asterisk"></span> About Us</a></li>                 
+                        <li><a href="Innovations.aspx"><span class="glyphicon glyphicon-globe"></span> Innovations</a></li> 
+                                                          
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents <i class="glyphicon glyphicon-arrow-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Newsletter.aspx">Newsletters</a></li>
+                                <li><a href="Technology.aspx">Technology</a></li>                                
+                                <li><a href="Domain.aspx">Domain</a></li>  
+                                <li><a href="Process.aspx">Process</a></li> 
+                                <li><a href="Search.aspx">Search</a></li> 
+                                <!--Added By Meena--> 
+                                <li><a href="DocumentUpload.aspx">Upload New Document</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="ContactUs.aspx"><span class="glyphicon glyphicon-phone"></span> Contact Us</a></li>
+                        <!--Added By Meena-->                         
+                        <li class="dropdown" id="dropdown">
+                            <a id="adminMenu" href="#"  runat="server" class="dropdown-toggle" data-toggle="dropdown">Admin <i class="glyphicon glyphicon-king"></i></a>
+                             <ul class="dropdown-menu">
+                            <li><a id="adminlink" href="AdminPage.aspx" runat="server">Approval Page</a></li>
+                             <li><a id="eventlink" href="EventsPage.aspx" runat="server">Events</a></li>
+                             </ul>
+                         </li>
+                      
+                    </ul>
+                </div>
+            </div><!--/.container-->
+            </nav><!--/nav-->		
+    </header>
+        <!--/header-->
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

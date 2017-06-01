@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10991DDA-E796-482A-A939-04B8405917E4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GWMPortal</RootNamespace>
+    <AssemblyName>GWMPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Chart Controls\Assemblies\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Chart Controls\Assemblies\System.Web.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPage.aspx" />
+    <Content Include="ApprovalPage.aspx" />
+    <Content Include="Bootstrap\ui\images\KMScore.png" />
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\ApprovePage.css" />
+    <Content Include="css\UploadPage.css" />
+    <Content Include="DocumentUpload.aspx" />
+    <Content Include="EventsPage.aspx" />
+    <Content Include="GWMPortalHome.aspx" />
+    <Content Include="Images\Icons\Delete.png" />
+    <Content Include="Images\Icons\Download.png" />
+    <Content Include="packages.config" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-text.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalPage.aspx.cs">
+      <DependentUpon>ApprovalPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovalPage.aspx.designer.cs">
+      <DependentUpon>ApprovalPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataAccess.cs" />
+    <Compile Include="Common\Document.cs" />
+    <Compile Include="Common\ErrorLog.cs" />
+    <Compile Include="Common\Events.cs" />
+    <Compile Include="Common\QuestionOfDay.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentUpload.aspx.cs">
+      <DependentUpon>DocumentUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentUpload.aspx.designer.cs">
+      <DependentUpon>DocumentUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain.aspx.cs">
+      <DependentUpon>Domain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Domain.aspx.designer.cs">
+      <DependentUpon>Domain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventsPage.aspx.cs">
+      <DependentUpon>EventsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventsPage.aspx.designer.cs">
+      <DependentUpon>EventsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GWMMaster.Master.cs">
+      <DependentUpon>GWMMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GWMMaster.Master.designer.cs">
+      <DependentUpon>GWMMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GWMPortalHome.aspx.cs">
+      <DependentUpon>GWMPortalHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GWMPortalHome.aspx.designer.cs">
+      <DependentUpon>GWMPortalHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innovations.aspx.cs">
+      <DependentUpon>Innovations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innovations.aspx.designer.cs">
+      <DependentUpon>Innovations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter.aspx.cs">
+      <DependentUpon>Newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Newsletter.aspx.designer.cs">
+      <DependentUpon>Newsletter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process.aspx.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process.aspx.designer.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferDocuments.aspx.cs">
+      <DependentUpon>ReferDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReferDocuments.aspx.designer.cs">
+      <DependentUpon>ReferDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Technology.aspx.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Technology.aspx.designer.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GWMMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\Template\css\animate.min.css" />
+    <Content Include="Bootstrap\Template\css\font-awesome.min.css" />
+    <Content Include="Bootstrap\Template\css\main.css" />
+    <Content Include="Bootstrap\Template\css\prettyPhoto.css" />
+    <Content Include="Bootstrap\Template\css\responsive.css" />
+    <Content Include="Bootstrap\Template\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\Template\js\jquery.isotope.min.js" />
+    <Content Include="Bootstrap\Template\js\jquery.js" />
+    <Content Include="Bootstrap\Template\js\jquery.prettyPhoto.js" />
+    <Content Include="Bootstrap\Template\js\main.js" />
+    <Content Include="Bootstrap\Template\js\wow.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\Template\css\bootstrap-theme.min.css" />
+    <Content Include="Bootstrap\Template\images\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Bootstrap\Template\images\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Bootstrap\Template\images\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Bootstrap\Template\images\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Bootstrap\Template\images\Documents.jpg" />
+    <Content Include="Bootstrap\Template\images\Domain.jpg" />
+    <Content Include="Bootstrap\Template\images\Domain1.jpg" />
+    <Content Include="Bootstrap\Template\images\Fav.png" />
+    <Content Include="Bootstrap\Template\images\GWMBanner1.png" />
+    <Content Include="Bootstrap\Template\images\img1.png" />
+    <Content Include="Bootstrap\Template\images\img2.png" />
+    <Content Include="Bootstrap\Template\images\img3.png" />
+    <Content Include="Bootstrap\Template\images\Innovation1.jpg" />
+    <Content Include="Bootstrap\Template\images\logo.png" />
+    <Content Include="Bootstrap\Template\images\Newsletter.jpg" />
+    <Content Include="Bootstrap\Template\js\jquery.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="App_Data\Gallery.xml" />
+    <Content Include="App_Data\HitCounter.xml" />
+    <Content Include="App_Data\Votes.xml" />
+    <Content Include="Bootstrap\Template\css\bootstrap.css" />
+    <Content Include="Bootstrap\Template\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\Template\css\business-casual.css" />
+    <Content Include="Bootstrap\Template\css\heroic-features.css" />
+    <Content Include="Bootstrap\Template\css\jquery-ui.css" />
+    <Content Include="Bootstrap\Template\css\jquery.bxslider.css" />
+    <Content Include="Bootstrap\Template\images\BusinessSample1.jpg" />
+    <Content Include="Bootstrap\Template\images\bx_loader.gif" />
+    <Content Include="Bootstrap\Template\images\Consulting.jpg" />
+    <Content Include="Bootstrap\Template\images\contact-icon.png" />
+    <Content Include="Bootstrap\Template\images\controls.png" />
+    <Content Include="Bootstrap\Template\images\DomainSample1.jpg" />
+    <Content Include="Bootstrap\Template\images\DotNet_Roadmap.png" />
+    <Content Include="Bootstrap\Template\images\E2GSample1.jpg" />
+    <Content Include="Bootstrap\Template\images\GWMBanner2.png" />
+    <Content Include="Bootstrap\Template\images\hill_trees.jpg" />
+    <Content Include="Bootstrap\Template\images\houses.jpg" />
+    <Content Include="Bootstrap\Template\images\icon_manual.png" />
+    <Content Include="Bootstrap\Template\images\Innovation.jpg" />
+    <Content Include="Bootstrap\Template\images\InnovationSample1.jpg" />
+    <Content Include="Bootstrap\Template\images\InnovationSample2.jpg" />
+    <Content Include="Bootstrap\Template\images\knowledge-sharing-001.jpg" />
+    <Content Include="Bootstrap\Template\images\knowledge-sharing-image-cropped_10.jpg" />
+    <Content Include="Bootstrap\Template\images\knowledge_sharing.jpg" />
+    <Content Include="Bootstrap\Template\images\Left1.png" />
+    <Content Include="Bootstrap\Template\images\LeftArrow.jpg" />
+    <Content Include="Bootstrap\Template\images\Logo-GWMIT.JPG" />
+    <Content Include="Bootstrap\Template\images\marketing-solutions.png" />
+    <Content Include="Bootstrap\Template\images\me_trees.jpg" />
+    <Content Include="Bootstrap\Template\images\newsletter-icon.png" />
+    <Content Include="Bootstrap\Template\images\Newsletter_001.JPG" />
+    <Content Include="Bootstrap\Template\images\Newsletter_Banner_1.jpg" />
+    <Content Include="Bootstrap\Template\images\Newsletter_Knowledge_Banner_2.jpg" />
+    <Content Include="Bootstrap\Template\images\pdf-icon.png" />
+    <Content Include="Bootstrap\Template\images\Prose-Icon-%28Newsletter%29.png" />
+    <Content Include="Bootstrap\Template\images\Questions.jpg" />
+    <Content Include="Bootstrap\Template\images\RBC_Banners_CAN.jpg" />
+    <Content Include="Bootstrap\Template\images\Right1.png" />
+    <Content Include="Bootstrap\Template\images\RightArrow.jpg" />
+    <Content Include="Bootstrap\Template\images\Roadmap.png" />
+    <Content Include="Bootstrap\Template\images\solutions.jpg" />
+    <Content Include="Bootstrap\Template\images\training-icon-1.png" />
+    <Content Include="Bootstrap\Template\images\training.png" />
+    <Content Include="Bootstrap\Template\images\Training_01.JPG" />
+    <Content Include="Bootstrap\Template\images\Training_02.JPG" />
+    <Content Include="Bootstrap\Template\images\Training_03.JPG" />
+    <Content Include="Bootstrap\Template\js\bootstrap.js" />
+    <Content Include="Bootstrap\Template\js\ie-bootstrap-carousel.min.js" />
+    <Content Include="Bootstrap\Template\js\ie-emulation-modes-warning.js" />
+    <Content Include="Bootstrap\Template\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="Bootstrap\Template\js\jasny-bootstrap.min.js" />
+    <Content Include="Bootstrap\Template\js\jquery-1.10.2.js" />
+    <Content Include="Bootstrap\Template\js\jquery-ui.js" />
+    <Content Include="Bootstrap\Template\js\jquery.bxslider.js" />
+    <Content Include="Bootstrap\Template\js\jquery.bxslider.min.js" />
+    <Content Include="Bootstrap\Template\js\jquery.easing.1.3.js" />
+    <Content Include="Bootstrap\Template\js\jquery.fitvids.js" />
+    <Content Include="Bootstrap\ui\css\bootstrap.css" />
+    <Content Include="Bootstrap\ui\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\ui\css\heroic-features.css" />
+    <Content Include="Bootstrap\ui\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootstrap\ui\images\a11.png" />
+    <Content Include="Bootstrap\ui\images\a21.png" />
+    <Content Include="Bootstrap\ui\images\b05.png" />
+    <Content Include="Bootstrap\ui\images\b21.png" />
+    <Content Include="Bootstrap\ui\images\Consulting.jpg" />
+    <Content Include="Bootstrap\ui\images\contact-icon.png" />
+    <Content Include="Bootstrap\ui\images\DotNet_Roadmap.png" />
+    <Content Include="Bootstrap\ui\images\Exception.jpg" />
+    <Content Include="Bootstrap\ui\images\icon_manual.png" />
+    <Content Include="Bootstrap\ui\images\Innovation.jpg" />
+    <Content Include="Bootstrap\ui\images\knowledge-sharing-001.jpg" />
+    <Content Include="Bootstrap\ui\images\knowledge-sharing-image-cropped_10.jpg" />
+    <Content Include="Bootstrap\ui\images\knowledge_sharing.jpg" />
+    <Content Include="Bootstrap\ui\images\Logo-GWMIT.JPG" />
+    <Content Include="Bootstrap\ui\images\marketing-solutions.png" />
+    <Content Include="Bootstrap\ui\images\newsletter-icon.png" />
+    <Content Include="Bootstrap\ui\images\Newsletter_001.JPG" />
+    <Content Include="Bootstrap\ui\images\Newsletter_Banner_1.jpg" />
+    <Content Include="Bootstrap\ui\images\Newsletter_Knowledge_Banner_2.jpg" />
+    <Content Include="Bootstrap\ui\images\pdf-icon.png" />
+    <Content Include="Bootstrap\ui\images\Prose-Icon-%28Newsletter%29.png" />
+    <Content Include="Bootstrap\ui\images\Roadmap.png" />
+    <Content Include="Bootstrap\ui\images\solutions.jpg" />
+    <Content Include="Bootstrap\ui\images\Team\Anish- Small.JPG" />
+    <Content Include="Bootstrap\ui\images\training-icon-1.png" />
+    <Content Include="Bootstrap\ui\images\training.png" />
+    <Content Include="Bootstrap\ui\images\Training_01.JPG" />
+    <Content Include="Bootstrap\ui\images\Training_02.JPG" />
+    <Content Include="Bootstrap\ui\images\Training_03.JPG" />
+    <Content Include="Bootstrap\ui\js\bootstrap.js" />
+    <Content Include="Bootstrap\ui\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\ui\js\docs.min.js" />
+    <Content Include="Bootstrap\ui\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="Bootstrap\ui\js\jquery-1.9.1.min.js" />
+    <Content Include="Bootstrap\ui\js\jquery.js" />
+    <Content Include="Bootstrap\ui\js\jssor.slider.mini.js" />
+    <Content Include="Bootstrap\xml\Solutions.xsl" />
+    <Content Include="Bootstrap\xml\Solutions.xml" />
+    <Content Include="Bootstrap\xml\CurrentTrends.xml" />
+    <Content Include="Bootstrap\xml\Gallery.xml" />
+    <Content Include="Bootstrap\xml\Newsletter.xml" />
+    <Content Include="Bootstrap\xml\Newsletter.xsl" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Documents\Sessions\Training_01.JPG" />
+    <Content Include="Domain.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\BusinessSample1.jpg" />
+    <Content Include="Images\CurrentTrends\AlternativeAssets.jpg" />
+    <Content Include="Images\CurrentTrends\ASP.NetWebAPI.jpg" />
+    <Content Include="Images\CurrentTrends\DotNet_2015.jpg" />
+    <Content Include="Images\CurrentTrends\Greece.jpg" />
+    <Content Include="Images\DomainSample1.jpg" />
+    <Content Include="Images\InnovationSample1.jpg" />
+    <Content Include="Images\InnovationSample2.jpg" />
+    <Content Include="Images\Roadmap.png" />
+    <Content Include="Images\Solutions\SQLServerMigrationTool.PNG" />
+    <Content Include="Images\Team\Anish.JPG" />
+    <Content Include="Images\Team\Prabakar.png" />
+    <Content Include="Images\Team\Prashant.jpg" />
+    <Content Include="Images\Team\Prince.jpg" />
+    <Content Include="Innovations.aspx" />
+    <Content Include="Newsletter.aspx" />
+    <Content Include="Process.aspx" />
+    <Content Include="ReferDocuments.aspx" />
+    <Content Include="Technology.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bootstrap\ui\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Bootstrap\ui\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Bootstrap\ui\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Bootstrap\ui\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Documents\Newsletter\GWM_T&amp;I_February_2015.pdf" />
+    <None Include="Documents\Newsletter\GWM_T&amp;I_January_2015.pdf" />
+    <None Include="Documents\Sessions\CA Understanding document.doc" />
+    <None Include="Documents\Sessions\CA_SCM.pptx" />
+    <None Include="Documents\Solutions\GWM - T&amp;I - SnapShooterTool V1.1.pptx" />
+    <None Include="Documents\Solutions\SQLMigrationtestingTool.pptx" />
+    <None Include="Documents\Solutions\SQL_Migration_Testing_Tool.docx" />
+    <None Include="Documents\Templates\CodeReview_Template.xls" />
+    <None Include="Documents\Templates\Code_Review_Report_Template.doc" />
+    <None Include="Documents\Templates\Costing&amp;Scheduling_Template.xls" />
+    <None Include="Documents\Templates\EBS_Estimation_Template.xls" />
+    <None Include="Documents\Templates\ImpactAnalysisDocument_Template.doc" />
+    <None Include="Documents\Templates\SCRWeb_WBS_Estimation_V_2.1.xls" />
+    <None Include="Documents\Templates\UTC_Template.xlsx" />
+    <None Include="Properties\PublishProfiles\GWMPortal.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55945</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
