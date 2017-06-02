@@ -8,7 +8,7 @@
                 <td style="width: 50%; vertical-align: top; padding-right: 30px">
                     <div>
                         <h3>
-                            <b>GWM Technology & Innovation Group</b></h3>
+                            <b>GWM Technology & Innovation Group - Testing phase...</b></h3>
                         <div align="left">
                             <p>
                                 Technology & Innovation group is an initiative within Global Wealth Management (GWM)
@@ -31,7 +31,7 @@
                         <div align="left">
                             <p style="text-align: justify; padding-left: 30px">
                                 Team of Wealth Management SMEs constituted to meet the business analysis needs of
-                                the GWM group. Consulting group’s goal is to ensure seamless delivery of projects
+                                the GWM group. Consulting groupâ€™s goal is to ensure seamless delivery of projects
                                 by delivery teams and continuously strive to improve the processes. The role of
                                 the consulting group is to enhance the quality of deliverables by advising, providing
                                 solutions, validating and approving the processes and deliverables from requirement
